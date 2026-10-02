@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scrape X — a Kraft Studios tool kit</title>
+    <meta name="description" content="Five Chrome tools that turn any website into data a designer can use — fonts, colour, images, documents and contacts. Everything runs in your browser." />
+    <meta name="theme-color" content="#0b0b0d" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./mark.webp" />
+    <meta property="og:title" content="Scrape X — a Kraft Studios tool kit" />
+    <meta property="og:description" content="Five Chrome tools that turn any website into data a designer can use. Everything runs in your browser." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://scrapex.tools/" />
+    <meta property="og:image" content="https://scrapex.tools/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // theme before paint, so there is no flash
+      try {
+        var t = localStorage.getItem("sx.theme");
+        document.documentElement.dataset.theme = t ? JSON.parse(t) : "dark";
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
